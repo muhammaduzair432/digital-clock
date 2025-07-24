@@ -1,0 +1,67 @@
+/* 🌄 Set full-screen background image */
+body {
+  background-image: url(back\ image.jpg); /* Replace with your image path or URL */
+  background-size: cover;                /* Cover the entire screen */
+  background-position: center;           /* Center the image */
+  background-repeat: no-repeat;          /* Prevent image from repeating */
+  color: white;                          /* Text color */
+  font-family: 'Segoe UI', sans-serif;   /* Font styling */
+  height: 100vh;                         /* Full height of viewport */
+  margin: 0;                             /* Remove default margin */
+  display: flex;                         /* Flex for centering content */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);            /* Optional: adds blur effect to background */
+}
+
+/* 🧱 Container to center content horizontally */
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* ⏰ Clock styling */
+.clock {
+  height: 35vh;                          /* 35% of viewport height */
+  width: 100%;                           /* Full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 3rem;                       /* Large font for time */
+  font-weight: bold;
+  /* font-family: Arial, Helvetica, sans-serif; Optional custom font */
+}
+
+/* 🔁 Toggle format button styling (12h/24h switch) */
+.toggleformate {
+  background: linear-gradient(to right, #3b82f6, #2563eb); /* Gradient blue */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease; /* Smooth hover effects */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);              /* Soft shadow */
+  margin-top: 20px;
+}
+
+/* 🔍 Button hover effect */
+.toggleformate:hover {
+  transform: scale(1.05);                                /* Slight zoom on hover */
+  background: linear-gradient(to right, #2563eb, #1d4ed8); /* Darker gradient */
+}
+
+/* 📱 Responsive styling for small screens */
+@media screen and (max-width: 600px) {
+  .toggleformate {
+    padding: 10px 16px;  /* Smaller padding */
+    font-size: 0.9rem;   /* Smaller font size */
+    width: 60%;          /* Button width adapts to smaller screen */
+  }
+
+  .clock {
+    font-size: 2.4rem;   /* Reduce clock size on smaller screens */
+  }
+}
